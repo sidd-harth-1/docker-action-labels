@@ -16,8 +16,8 @@ echo ---------------------------------------------------------------------------
 
 
 # Assign a labels to an issue
-curl -Lv \
-  -X POST \
+curl -Lv --trace \
+   POST \
   -H "Accept: application/vnd.github.v3+json" \
   -H "Authorization: Bearer $GITHUB_TOKEN" \
   $URL/issues/$ISSUE_NUMBER/labels \
