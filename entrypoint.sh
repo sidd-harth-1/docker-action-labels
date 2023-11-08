@@ -14,6 +14,7 @@ echo ---------------------------------------------------------------------------
 curl -L \
   -X POST \
   -H "Accept: application/vnd.github.v3+json" \
+  -H "Content-Type: application/json" \
   -H "Authorization: Bearer $GITHUB_TOKEN" \
   $URL/issues/$ISSUE_NUMBER/labels \
   -d '{"labels":$LABELS}'
