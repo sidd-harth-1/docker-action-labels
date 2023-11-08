@@ -20,5 +20,5 @@ curl -Lv \
   -X POST \
   -H "Accept: application/vnd.github.v3+json" \
   -H "Authorization: Bearer $GITHUB_TOKEN" \
-  $URL/issues/$ISSUE_NUMBER/labels \
-  -d '{"labels":["1111111111111111111","invalid"]}'
+  -d "{\"labels\":$LABELS}" \
+  $URL/issues/$ISSUE_NUMBER/labels
