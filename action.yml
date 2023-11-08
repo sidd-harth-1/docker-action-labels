@@ -1,0 +1,14 @@
+name: 'Add Issue Labels'
+inputs:
+  github-token:
+    description: 'GitHub Token'
+    required: true
+  labels:
+    description: 'Labels to be added'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.github-token }}
+    - ${{ inputs.labels }}
