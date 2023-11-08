@@ -9,7 +9,7 @@ ISSUE_NUMBER=$(jq --raw-output .issue.number "$GITHUB_EVENT_PATH")
 URL=$(jq --raw-output .issue.repository_url "$GITHUB_EVENT_PATH")
 
 
-# Assign a labels to an issue
+# Assign a labels to an issue using GITHUB REST API
 curl -L \
   -X POST \
   -H "Accept: application/vnd.github.v3+json" \

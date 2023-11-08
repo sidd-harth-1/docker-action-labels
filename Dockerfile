@@ -1,6 +1,6 @@
 FROM alpine:3.10
 
-# Install necessary packages
+# Install necessary cURL and JQ packages
 RUN apk update && \
     apk add --no-cache curl jq
 
