@@ -1,0 +1,18 @@
+on:
+    labels: 
+          types:
+           - opened
+           - labeled
+jobs:
+    test:
+      runs-on: ubuntu-latest
+      name: A test job
+      permissions:
+        issues: write
+        pull-requests: write
+      steps:
+      - name: Test just output the message
+        uses: ./
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          labels: '["bugs","invalid"]'
