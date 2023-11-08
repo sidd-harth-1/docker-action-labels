@@ -1,5 +1,5 @@
 on:
-    labels: 
+    issues: 
           types:
            - opened
            - labeled
