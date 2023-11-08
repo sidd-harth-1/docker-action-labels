@@ -10,7 +10,7 @@ URL=$(jq --raw-output .issue.repository_url "$GITHUB_EVENT_PATH")
 
 
 # Assign a labels to an issue
-curl -Lv \
+curl -L \
   -X POST \
   -H "Accept: application/vnd.github.v3+json" \
   -H "Authorization: Bearer $GITHUB_TOKEN" \
