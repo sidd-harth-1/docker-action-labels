@@ -11,7 +11,7 @@ echo "$URL/issues/$ISSUE_NUMBER/labels"
 echo -------------------------------------------------------------------------------
 echo $LABELS
 echo -------------------------------------------------------------------------------
-echo "  -d '{"labels":$LABELS}'"
+echo "  -d '{\"labels\":$LABELS}'"
 echo -------------------------------------------------------------------------------
 
 
@@ -22,4 +22,4 @@ curl -L \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $GITHUB_TOKEN" \
   $URL/issues/$ISSUE_NUMBER/labels \
-  -d '{"labels":$LABELS}'
+  -d '{\"labels\":$LABELS}'
