@@ -17,8 +17,8 @@ echo ---------------------------------------------------------------------------
 
 # Assign a labels to an issue
 curl -Lv \
-   POST \
+  -X POST \
   -H "Accept: application/vnd.github.v3+json" \
   -H "Authorization: Bearer $GITHUB_TOKEN" \
   $URL/issues/$ISSUE_NUMBER/labels \
-  -d '{"labels":["bugs","invalid"]}'
+  -d '{"labels":["1111111111111111111","invalid"]}'
