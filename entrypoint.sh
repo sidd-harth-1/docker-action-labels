@@ -6,8 +6,12 @@ LABELS=$2
 ISSUE_NUMBER=$(jq --raw-output .issue.number "$GITHUB_EVENT_PATH")
 URL=$(jq --raw-output .issue.repository_url "$GITHUB_EVENT_PATH")
 
+echo -------------------------------------------------------------------------------
+echo "$URL/issues/$ISSUE_NUMBER/labels"
+echo -------------------------------------------------------------------------------
+
 # Assign a labels to an issue
-curl \
+curl -L \
   -X POST \
   -H "Accept: application/vnd.github.v3+json" \
   -H "Authorization: Bearer $GITHUB_TOKEN" \
